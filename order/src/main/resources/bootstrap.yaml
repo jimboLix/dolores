@@ -1,0 +1,32 @@
+
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG-SERVER
+      profile: dev
+    stream:
+      bindings:
+        message:
+          group: order
+  rabbitmq:
+    host: 47.98.140.228
+    port: 5672
+    username: guest
+    password: guest
+  application:
+    name: order
+eureka:
+  client:
+    service-url:
+      defaultZone: http://47.98.140.228:8762/eureka/
+spring:
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: raw-sensor-data
+        output:
+          destination: raw-sensor-data
+

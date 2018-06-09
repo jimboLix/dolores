@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: center
+server:
+  port: 8762
+
+eureka:
+  instance:
+    hostname: eureka-server-peer1
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8762/eureka/
+      ##defaultZone: http://47.98.140.228:8762/eureka/
+    fetch-registry: false
+    register-with-eureka: false
+  server:
+    enable-self-preservation: false #关闭自我保护模式
+

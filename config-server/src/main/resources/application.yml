@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/jimboLix/configServer
+          username: lrhtomcat@163.com
+          password: asas1212
+          basedir: F:\workspace\configRep
+  rabbitmq:
+    host: 47.98.140.228
+    port: 5672
+    username: guest
+    password: guest
+eureka:
+  client:
+    service-url:
+      defaultZone: http://47.98.140.228:8762/eureka/
+  instance:
+    prefer-ip-address: true
+#    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
+server:
+  port: 8080
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+
