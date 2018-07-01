@@ -7,7 +7,7 @@ spring:
         git:
           uri: https://github.com/jimboLix/configServer
           username: lrhtomcat@163.com
-          password: asas1212
+          password: 
           basedir: F:\workspace\configRep
   rabbitmq:
     host: 47.98.140.228
