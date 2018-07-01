@@ -1,5 +1,6 @@
 package com.microservice.product.clients;
 
+import com.microservice.product.entity.DecreaseStockInput;
 import com.microservice.product.entity.ProductInfoOutput;
 import com.microservice.product.entity.vo.ProductVo;
 import com.microservice.product.entity.vo.ResultVo;
@@ -26,4 +27,6 @@ public interface ProductClients {
     @RequestMapping("/product/listForOrder")
     List<ProductInfoOutput> listForOrder(@RequestBody List<String> productIds);
 
+    @RequestMapping("/product/decreaseStock")
+    void decreaseStock(@RequestBody List<DecreaseStockInput> decreaseStockInput);
 }
