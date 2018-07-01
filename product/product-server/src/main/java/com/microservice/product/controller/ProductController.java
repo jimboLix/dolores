@@ -1,5 +1,6 @@
 package com.microservice.product.controller;
 
+import com.microservice.product.entity.DecreaseStockInput;
 import com.microservice.product.entity.ProductCategory;
 import com.microservice.product.entity.ProductInfo;
 import com.microservice.product.entity.ProductInfoOutput;
@@ -73,4 +74,13 @@ public class ProductController {
         return productInfoService.productListForOrder(productIds);
     }
 
+    /**
+     *  @requestBody 注解常用来处理content-type不是默认的application/x-www-form-urlcoded编码的内容，
+     *  比如说：application/json或者是application/xml等。一般情况下来说常用其来处理application/json类型。
+     *  通过@requestBody可以将请求体中的JSON字符串绑定到相应的bean上
+     */
+    @PostMapping("/decreaseStock")
+    public void decreaseStock(@RequestBody List<DecreaseStockInput> decreaseStockInputList){
+        productInfoService.decreaseStock(decreaseStockInputList);
+    }
 }
