@@ -1,5 +1,6 @@
 package com.microservice.product.service;
 
+import com.microservice.product.entity.DecreaseStockInput;
 import com.microservice.product.entity.ProductInfo;
 import com.microservice.product.entity.ProductInfoOutput;
 
@@ -22,4 +23,6 @@ public interface ProductInfoService {
     List<ProductInfo> getAllUp();
 
     List<ProductInfoOutput> productListForOrder(List<String> productIdList);
+
+    void decreaseStock(List<DecreaseStockInput> inputs);
 }
