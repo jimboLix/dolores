@@ -8,7 +8,7 @@ spring:
           uri: https://github.com/jimboLix/configServer
           username: lrhtomcat@163.com
           password: 
-          basedir: F:\workspace\configRep
+          basedir: /tmp/configRep
   rabbitmq:
     host: 47.98.140.228
     port: 5672
@@ -17,9 +17,14 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://47.98.140.228:8762/eureka/
+      defaultZone: http://peer1:8761/eureka/,http://peer2:8762/eureka/
+#      defaultZone: http://47.98.140.228:8762/eureka/
   instance:
     prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 30
+    lease-expiration-duration-in-seconds: 90
+    hostname: config-server
+    instance-id: config-server
 #    instance-id: ${spring.cloud.client.ipAddress}:${server.port}
 server:
   port: 8080
@@ -28,6 +33,7 @@ management:
     web:
       exposure:
         include: "*"
+
 
 
 

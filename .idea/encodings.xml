@@ -2,6 +2,8 @@
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/account" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/account/account-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/center" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/order" charset="UTF-8" />
@@ -9,6 +11,7 @@
     <file url="file://$PROJECT_DIR$/product/product-client" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/product/product-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/product/product-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../gateway" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
